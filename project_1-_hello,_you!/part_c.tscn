@@ -10,8 +10,8 @@ grow_vertical = 2
 
 [node name="PlaceholderLabel" type="Label" parent="."]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 656.0
+offset_right = 1315.0
+offset_bottom = 904.0
 theme_override_font_sizes/font_size = 20
 text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
 
