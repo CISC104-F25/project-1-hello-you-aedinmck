@@ -1,4 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=22 format=3 uid="uid://clwrsdsnmy3md"]
+
+[ext_resource type="PackedScene" uid="uid://4sy4oeoj170" path="res://part_b.tscn" id="1_ys316"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
@@ -115,3 +117,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3xb3d")
 transform = Transform3D(-0.00607383, 0.09558021, 0, -0.01739278, -0.03337811, 0, 0, 0, 0.0865391, -0.00018048286, 2.416539, -0.015666008)
 mesh = SubResource("SphereMesh_eso0h")
 surface_material_override/0 = SubResource("StandardMaterial3D_grw75")
+
+[node name="Monster_M" parent="." instance=ExtResource("1_ys316")]
+transform = Transform3D(0.018090526, 0, -0.28410023, 0, 0.79087585, 0, 0.6045519, 0, 0.008501375, 0.68847775, 1.1318609, 0.07191253)
