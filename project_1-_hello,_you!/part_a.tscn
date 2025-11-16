@@ -1,6 +1,19 @@
-[gd_scene load_steps=22 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=26 format=3 uid="uid://clwrsdsnmy3md"]
 
 [ext_resource type="PackedScene" uid="uid://4sy4oeoj170" path="res://part_b.tscn" id="1_ys316"]
+[ext_resource type="PackedScene" uid="uid://clhttn3a0ep70" path="res://part_c.tscn" id="2_to4tk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_to4tk"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_0jsbj"]
+sky_material = SubResource("ProceduralSkyMaterial_to4tk")
+
+[sub_resource type="Environment" id="Environment_q6bo7"]
+background_mode = 2
+sky = SubResource("Sky_0jsbj")
+tonemap_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
@@ -63,6 +76,13 @@ albedo_color = Color(0.10561416, 0.10561416, 0.10561416, 1)
 
 [node name="Part_A" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q6bo7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
 [node name="PlaceholderFloor" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.67902, 0, 0, 0, 1, 0, 0, 0, 2.65012, 0, 0.12178922, 0)
 mesh = SubResource("PlaneMesh_m6jki")
@@ -120,3 +140,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_grw75")
 
 [node name="Monster_M" parent="." instance=ExtResource("1_ys316")]
 transform = Transform3D(0.018090526, 0, -0.28410023, 0, 0.79087585, 0, 0.6045519, 0, 0.008501375, 0.68847775, 1.1318609, 0.07191253)
+
+[node name="Camera3D" type="Camera3D" parent="Monster_M"]
+transform = Transform3D(-1.346641, -0.42934108, -1.1215597, -0.38922197, 1.1939138, 0.14777043, 0.9517717, 0.6610956, -3.2233274, -0.8405014, 2.0136862, -8.358532)
+
+[node name="Part_C" parent="Monster_M" instance=ExtResource("2_to4tk")]

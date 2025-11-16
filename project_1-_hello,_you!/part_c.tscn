@@ -1,19 +1,50 @@
-[gd_scene format=3 uid="uid://clhttn3a0ep70"]
+[gd_scene load_steps=5 format=3 uid="uid://clhttn3a0ep70"]
+
+[ext_resource type="Texture2D" uid="uid://d3cmjtfawxf61" path="res://icon.svg" id="1_3seef"]
+[ext_resource type="Texture2D" uid="uid://dwp6c6hbey7xi" path="res://Screenshot 2025-11-16 at 2.21.17 PM.png" id="2_tlj50"]
+
+[sub_resource type="SystemFont" id="SystemFont_ovfvb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e15qq"]
+font = SubResource("SystemFont_ovfvb")
+font_size = 35
+font_color = Color(0.015686275, 0.015686275, 0.27450982, 1)
 
 [node name="Part_C" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -867.0
+offset_bottom = -557.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlaceholderLabel" type="Label" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 1315.0
-offset_bottom = 904.0
-theme_override_font_sizes/font_size = 20
-text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
+offset_left = 1.0
+offset_top = 20.0
+offset_right = 288.0
+offset_bottom = 76.0
+text = "Aedin McKenna"
+label_settings = SubResource("LabelSettings_e15qq")
 
-Remember that you may need to scroll down to \"Theme Overrides > Font Sizes\" in the Inspector 
-to make your labels big enough to read. (This is font size 20px, for reference)."
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 88.0
+offset_right = 504.0
+offset_bottom = 247.0
+theme_override_font_sizes/normal_font_size = 20
+text = "This is different from my original project for time reasons, but I did want to make a monster can! My favorite games are OSU! and The Last of Us, and I'm music editor for 8 bit orchestra."
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(83, 276)
+scale = Vector2(1.1015625, 1.1640625)
+texture = ExtResource("1_3seef")
+
+[node name="Screenshot20251116At2_21_17Pm" type="Sprite2D" parent="."]
+position = Vector2(281.99997, 336.00006)
+scale = Vector2(0.75177306, 0.6142857)
+texture = ExtResource("2_tlj50")
