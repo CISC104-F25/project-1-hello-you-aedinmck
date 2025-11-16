@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=6 format=3 uid="uid://clwrsdsnmy3md"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
@@ -8,6 +8,8 @@ albedo_color = Color(0.21448, 0.1344, 0.28, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_m6jki"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ys316"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_to4tk"]
 
 [node name="Part_A" type="Node3D"]
 
@@ -22,4 +24,16 @@ mesh = SubResource("CylinderMesh_m6jki")
 
 [node name="can_base1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.2839954, 0, 0, 0, 0.04924439, 0, 0, 0, 1.2839954, 0, 0.26897073, 0)
+mesh = SubResource("CylinderMesh_ys316")
+
+[node name="can_body" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3462942, 0, 0, 0, 0.9286158, 0, 0, 0, 1.3462942, 0, 1.2523241, 0)
+mesh = SubResource("CylinderMesh_to4tk")
+
+[node name="can_top" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.1956629, 0, 0, 0, 0.040621433, 0, 0, 0, 1.1956629, 0, 2.3167634, 0)
+mesh = SubResource("CylinderMesh_m6jki")
+
+[node name="can_top2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2839954, 0, 0, 0, 0.04924439, 0, 0, 0, 1.2839954, 0, 2.230339, 0)
 mesh = SubResource("CylinderMesh_ys316")
