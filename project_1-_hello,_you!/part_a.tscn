@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=11 format=3 uid="uid://clwrsdsnmy3md"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
@@ -10,6 +10,19 @@ albedo_color = Color(0.21448, 0.1344, 0.28, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_ys316"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_to4tk"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_m6jki"]
+inner_radius = 0.86
+
+[sub_resource type="TorusMesh" id="TorusMesh_ys316"]
+outer_radius = 0.265
+rings = 72
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_q6bo7"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0jsbj"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_eso0h"]
 
 [node name="Part_A" type="Node3D"]
 
@@ -31,9 +44,29 @@ transform = Transform3D(1.3462942, 0, 0, 0, 0.9286158, 0, 0, 0, 1.3462942, 0, 1.
 mesh = SubResource("CylinderMesh_to4tk")
 
 [node name="can_top" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.1956629, 0, 0, 0, 0.040621433, 0, 0, 0, 1.1956629, 0, 2.3167634, 0)
+transform = Transform3D(1.1956629, 0, 0, 0, 0.040621433, 0, 0, 0, 1.1956629, 0, 2.2924745, 0)
 mesh = SubResource("CylinderMesh_m6jki")
 
 [node name="can_top2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.2839954, 0, 0, 0, 0.04924439, 0, 0, 0, 1.2839954, 0, 2.230339, 0)
 mesh = SubResource("CylinderMesh_ys316")
+
+[node name="top_rim" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6026605, 0, 0, 0, 0.5936387, 0, 0, 0, 0.60093874, 0, 2.3358784, 0)
+mesh = SubResource("TorusMesh_m6jki")
+
+[node name="can_lid_depth" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.507249, 0, 0, 0, 0.09571242, 0, 0, 0, 0.84989125, 0.26997077, 2.3547268, 0)
+mesh = SubResource("TorusMesh_ys316")
+
+[node name="tab_detail" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0921639, 0.002971522, 0, -0.031518817, 0.008689001, 0, 0, 0, 0.16417402, -0.14251587, 2.4698079, 0)
+mesh = SubResource("CylinderMesh_q6bo7")
+
+[node name="tab" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4940444, 0.004625646, 0, -0.17768186, 0.012861607, 0, 0, 0, 0.2797517, -0.06975055, 2.4185874, 0)
+mesh = SubResource("CylinderMesh_0jsbj")
+
+[node name="tab_detail2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.00607383, 0.09558021, 0, -0.01739278, -0.03337811, 0, 0, 0, 0.0865391, -0.00018048286, 2.416539, -0.015666008)
+mesh = SubResource("SphereMesh_eso0h")
